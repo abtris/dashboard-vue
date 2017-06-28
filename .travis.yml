@@ -1,0 +1,9 @@
+dist: trusty
+addons:
+  chrome: stable
+language: node_js
+before_install:
+  - npm install -g npm@"$(jq -r '.engines.npm' package.json)"
+node_js:
+  - 6
+script: npm run lint && npm test

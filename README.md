@@ -1,4 +1,6 @@
-# vue-demo2
+[![Build Status](https://travis-ci.org/abtris/dashboard-vue.svg?branch=master)](https://travis-ci.org/abtris/dashboard-vue)
+
+# PagerDuty Dashboard
 
 > A Vue.js project
 
