@@ -1,4 +1,4 @@
-# vue-demo2
+# PagerDuty Dashboard
 
 > A Vue.js project
 
