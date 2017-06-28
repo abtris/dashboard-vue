@@ -3,7 +3,12 @@ addons:
   chrome: stable
 language: node_js
 before_install:
+  # Travis CI has only shallow clone of the repository. We need to get the 'master' branch
+  # so 'conventional-changelog-lint' could compare commits and lint them: marionebl/conventional-changelog-lint#7
+  - "git remote set-branches origin master && git fetch && git checkout master && git checkout -"
   - npm install -g npm@"$(jq -r '.engines.npm' package.json)"
 node_js:
   - 6
-script: npm run lint && npm test
+script:
+  - npm run lint
+  - npm test
